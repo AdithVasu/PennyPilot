@@ -1,0 +1,245 @@
+:root {
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-900: #0f172a;
+    --slate-950: #020617;
+    --white: #ffffff;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--slate-50);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--slate-900);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Global Container */
+  .main-layout {
+    max-width: 56rem; /* max-w-4xl */
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  
+  /* Header Component */
+  .sticky-header {
+    width: 100%;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--slate-200);
+    padding: 1.25rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+  }
+  
+  .header-container {
+    max-width: 72rem; /* max-w-6xl */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Typography */
+  .brand-logo {
+    font-size: 1.875rem;
+    font-weight: 900;
+    color: var(--slate-950);
+    letter-spacing: -0.05em;
+    margin: 0;
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--slate-950);
+    letter-spacing: -0.025em;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+  
+  /* TripPlanner Card */
+  .planner-card {
+    background: var(--white);
+    border-radius: 2rem;
+    border: 1px solid var(--slate-200);
+    padding: 2.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem;
+  }
+  
+  .input-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .input-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .full-width {
+      grid-column: span 2;
+    }
+  }
+  
+  /* Inputs & Labels */
+  .field-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--slate-500);
+    margin-left: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pill-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: 0.75rem;
+    font-weight: 700;
+    color: var(--slate-900);
+    transition: all 0.2s;
+    box-sizing: border-box;
+  }
+  
+  .pill-input:focus {
+    outline: none;
+    border-color: var(--slate-950);
+    background-color: var(--white);
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    width: 100%;
+    background-color: var(--slate-950);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #000;
+  }
+  
+  .btn-secondary {
+    background-color: var(--slate-950);
+    color: var(--white);
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Saved Trip Cards */
+  .history-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .history-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .trip-card {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    border: 1px solid var(--slate-200);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .trip-badge {
+    background-color: var(--slate-100);
+    color: var(--slate-950);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-weight: 900;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  
+  /* Modal Styling */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(2, 6, 23, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 50;
+  }
+  
+  .modal-body {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 42rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .modal-header {
+    padding: 2rem;
+    border-bottom: 1px solid var(--slate-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--slate-50);
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+  }
+
+  .auth-page {
+    
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--slate-50);
+    
+   
+    display: flex;
+    align-items: center;    
+    justify-content: center;  
+    
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  
+  .auth-card {
+    width: 100%;
+    max-width: 420px; 
+    background: var(--white);
+    border-radius: 2rem;
+    border: 1px solid var(--slate-100);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem; 
+  }
