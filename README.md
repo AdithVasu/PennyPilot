@@ -1,5 +1,4 @@
-# ✈️ PennyPilot
-**Like a luxury travel concierge, but catered towards budget-conscious travelers.**
+# PennyPilot
 
 ---
 
